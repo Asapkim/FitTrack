@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrack - Workouts</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/logo.svg" alt="FitTrack Logo" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workouts.html" class="active">Workouts</a></li>
+                <li><a href="nutrition.html">Nutrition</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Your Workouts</h1>
+        <section id="workout-planner">
+            <h2>Workout Planner</h2>
+            <form id="workout-form">
+                <label for="workout-type">Workout Type:</label>
+                <select id="workout-type" name="workout-type" required>
+                    <option value="">Select a workout type</option>
+                    <option value="cardio">Cardio</option>
+                    <option value="strength">Strength Training</option>
+                    <option value="flexibility">Flexibility</option>
+                    <option value="hiit">HIIT</option>
+                </select>
+
+                <label for="workout-duration">Duration (minutes):</label>
+                <input type="number" id="workout-duration" name="workout-duration" min="5" max="180" required>
+
+                <label for="workout-date">Date:</label>
+                <input type="date" id="workout-date" name="workout-date" required>
+
+                <button type="submit">Add Workout</button>
+            </form>
+        </section>
+
+        <section id="workout-history">
+            <h2>Workout History</h2>
+            <table id="workout-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Duration</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Workout history will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FitTrack. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
